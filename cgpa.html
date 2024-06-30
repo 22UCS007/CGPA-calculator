@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: #f0c3e9;
+    }
+    
+    button{
+        background-color: red;
+    }
+
+    h3{
+        color: blue;
+    }
+
+</style>
+<body>
+  <h1>CALCULATE CGPA</h1>
+  <h2>FOR NIT Agartala</h2>
+    Enter your branch:
+    <select name="sagnik" id="f">
+    <option value="">choose your branch</option>
+    <option value="CSE">CSE</option>
+    <option value="ECE">ECE</option>
+    <option value="EIE">EIE</option>
+    <option value="EEE">EEE</option>
+    <option value="CHE">CHE</option>
+    <!-- <option value="CE">CE</option> -->
+    </select>
+    <br>
+    <br>
+    Enter current semester:
+    <br>
+    <input type="number" id="a" min="1" max="8">
+    <br>
+    <br>
+    Enter sgpa from 1st sem onwards:
+    <br>
+    <input type="number" id="c">
+    <button onclick="sgpa()">NEXT</button>
+    </br>
+    <p id="b">Records of SGPA:</p>
+    <button type="button" onClick="window.location.reload()">RESET</button>
+   <button onclick="cgpa()">CGPA</button>
+    <br>
+    <h3 id="cg-el"></h3>
+    <script type="text/javascript">
+      let i=0,j=0,k=0,m=0,x=0;
+      let n=document.getElementById("a").value;
+      let na=Array();
+      function sgpa(){
+        if(i<n){
+        document.getElementById("b").innerHTML="Records of SGPA:";
+        na[i]=document.getElementById("c").value;
+        i++;
+        document.getElementById("c").value="";
+        document.getElementById("b").innerHTML+=na;
+        }
+      }
+      let cg=document.getElementById("cg-el");
+      function cgpa(){
+        let cse=[22,22,24,21,24,26,13,13];
+        let ece=[22,22,24,21,24,26,13,13];
+        let eie=[22,22,24,21,24,26,13,13];
+        let eee=[22,21,24,21,24,26,13,13];
+        let che=[22,22,24,21,24,26,13,13];
+        if(document.getElementById("f").value=="CSE"){
+        while(n>0){
+          j+=cse[k]*na[m];
+          x+=cse[k];
+          k++;
+          m++;
+          n--;
+        }
+        }
+        else if(document.getElementById("f").value=="ECE"){
+        while(n>0){
+          j+=ece[k]*na[m];
+          x+=ece[k];
+          k++;
+          m++;
+          n--;
+        }
+        }
+        else if(document.getElementById("f").value=="EIE"){
+        while(n>0){
+          j+=eie[k]*na[m];
+          x+=eie[k];
+          k++;
+          m++;
+          n--;
+        }
+        }
+        if(document.getElementById("f").value=="EEE"){
+        while(n>0){
+          j+=eee[k]*na[m];
+          x+=eee[k];
+          k++;
+          m++;
+          n--;
+        }
+        }
+        else if(document.getElementById("f").value=="CHE"){
+        while(n>0){
+          j+=che[k]*na[m];
+          x+=che[k];
+          k++;
+          m++;
+          n--;
+        }
+        }
+      
+        let y=j/x;
+        cg.textContent="your cgpa is:"+y;
+      }
+    </script>
+</body>
+</html>
