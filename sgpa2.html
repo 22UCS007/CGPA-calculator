@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: #e5c3f0;
+    }
+    
+    button{
+        background-color: red;
+    }
+
+    h3{
+        color: blue;
+    }
+
+</style>
+<body>
+  <h1>CALCULATE SGPA</h1>
+  <h2>FOR NIT Agartala</h2>
+    Enter your branch:
+    <select name="sagnik" id="f">
+    <option value="">choose your branch</option>
+    <option value="CSE">CSE</option>
+    <option value="ECE">ECE</option>
+    <option value="EIE">EIE</option>
+    <option value="EEE">EEE</option>
+    <option value="CHE">CHE</option>
+    <!-- <option value="CE">CE</option> -->
+    </select>
+    <br>
+    <br>
+    Enter next semester:
+    <br>
+    <input type="number" id="a" min="1" max="8">
+    <br>
+    <br>
+    Enter current CGPA
+    <br>
+    <input type="number" id="h">
+    <br>
+    <br>
+    Enter reqired CGPA
+    <br>
+    <input type="number" id="g">
+     <br> 
+    <br>
+    <button type="button" onClick="window.location.reload()">RESET</button>
+   <button onclick="sgpa1()">SGPA</button>
+    <br>
+    <h3 id="sg-el"></h3>
+    <script type="text/javascript">
+      let i=0,j=0,k=0,m=0,x=0,z=0;
+      let n=document.getElementById("a").value;
+      let p=document.getElementById("g").value;
+      let q=document.getElementById("h").value;
+      let sg=document.getElementById("sg-el");
+      function sgpa1(){
+        let cse=[22,22,24,23,24,26,13,13];
+        let ece=[22,22,24,21,24,26,13,13];
+        let eie=[22,22,24,23,24,26,13,13];
+        let eee=[22,21,24,21,24,26,13,13];
+        let che=[22,22,24,21,24,26,13,13];
+        if(document.getElementById("f").value=="CSE"){
+        while(n-1>0){
+          x+=cse[k];
+          k++;
+          n--;
+        }
+        z=cse[k];
+        }
+        else if(document.getElementById("f").value=="ECE"){
+        while(n>0){
+          j+=ece[k]*na[m];
+          x+=ece[k];
+          k++;
+          m++;
+          n--;
+        }
+        x+=ece[k];
+        z=ece[k];
+        }
+        else if(document.getElementById("f").value=="EIE"){
+        while(n>0){
+          j+=eie[k]*na[m];
+          x+=eie[k];
+          k++;
+          m++;
+          n--;
+        }
+        x+=eie[k];
+        z=eie[k];
+        }
+        else if(document.getElementById("f").value=="EEE"){
+        while(n>0){
+          j+=eee[k]*na[m];
+          x+=eee[k];
+          k++;
+          m++;
+          n--;
+        }
+        x+=eee[k];
+        z=eee[k];
+        }
+        else if(document.getElementById("f").value=="CHE"){
+        while(n>0){
+          j+=che[k]*na[m];
+          x+=che[k];
+          k++;
+          m++;
+          n--;
+        }
+        x+=che[k];
+        z=che[k];
+        }
+        let Y=q*x;
+        let y=Y.toFixed(2);
+        let U=((p*(x+z))-y)/z;
+        // let o=U.toString();
+        let u=parseFloat(U.toFixed(2))
+        sg.textContent="your required sgpa for the next sem is:"+u;
+      }
+    </script>
+</body>
+</html>
+
+<!-- problem facing with the rounding value of u -->
