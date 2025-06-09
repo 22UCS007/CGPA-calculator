@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA & SGPA Calculator</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+        }
+        .container1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #c1d4e8, #bfeffd);
+            height: 100vh;
+            width: 100%;
+        }
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            color: rgb(28, 1, 1);
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .container2 {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+
+        h3 {
+            color: #007bff;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 15px;
+        }
+        .btn {
+            background: #007bff;
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            width: 100%;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container1">
+        <h2 class="title">ACADEMIC CALCULATOR</h2> 
+        
+        <div class="container2">
+            <h3>For NIT Agartala</h3>
+            <p>Click below to calculate your CGPA:</p>
+            <a href="sgpa1.html"><button class="btn">CALCULATE CGPA</button></a>
+
+            <p>Click below to calculate the required SGPA:</p>
+            <a href="sgpa2.html"><button class="btn">CALCULATE SGPA</button></a>
+        </div>
+    </div>
+
+</body>
+</html>

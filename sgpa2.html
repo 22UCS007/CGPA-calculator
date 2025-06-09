@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGPA Calculator</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #e5c3f0, #d3a5e1);
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 90%;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #5e2572;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            font-size: 18px;
+            color: #007bff;
+            font-weight: 500;
+        }
+
+        h3 {
+            color: #5e2572;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 16px;
+            color: #333;
+        }
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            outline: none;
+        }
+        .btn {
+            background: #007bff;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 10px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .btn-reset {
+            background: red;
+        }
+
+        .btn-reset:hover {
+            background: darkred;
+        }
+
+        .btn-back {
+          background: rgb(18, 164, 67);
+        }
+
+        .btn-back:hover {
+          background: rgb(3, 83, 40);
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>CALCULATE SGPA</h1>
+        <h2>FOR NIT Agartala</h2>
+
+        <p>Enter your branch:</p>
+        <select id="f">
+            <option value="">Choose your branch</option>
+            <option value="CSE">CSE</option>
+            <option value="ECE">ECE</option>
+            <option value="EIE">EIE</option>
+            <option value="EEE">EEE</option>
+            <option value="CHE">CHE</option>
+        </select>
+
+        <p>Enter next semester:</p>
+        <input type="number" id="a" min="1" max="8">
+
+        <p>Enter current CGPA:</p>
+        <input type="number" id="h">
+
+        <p>Enter required CGPA:</p>
+        <input type="number" id="g">
+
+        <button class="btn btn-reset" type="button" onClick="window.location.reload()">RESET</button>
+        <button class="btn" onclick="sgpa1()">CALCULATE SGPA</button>
+        <button class="btn btn-back" onclick="goBack()">GO BACK</button>
+
+        <h3 id="sg-el"></h3>
+    </div>
+
+    <script src="script2.js"></script>
+
+</body>
+</html>
